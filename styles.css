@@ -115,10 +115,12 @@ button {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-copy {
   max-width: 660px;
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -135,7 +137,7 @@ button {
 }
 
 .hero-title {
-  margin: 1.4rem 0 1rem;
+  margin: 0 0 1.2rem;
   font-size: clamp(3rem, 6vw, 5.4rem);
   line-height: 0.95;
 }
@@ -149,6 +151,7 @@ button {
   color: #b8f7d3;
   font-size: 1.05rem;
   line-height: 1.85;
+  font-weight: 600;
 }
 
 .tagline-line {
@@ -239,6 +242,9 @@ button {
   border: 1px solid rgba(44, 255, 168, 0.16);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-panel::before {
@@ -247,6 +253,27 @@ button {
   inset: 0;
   background: radial-gradient(circle at top right, rgba(44, 255, 168, 0.14), transparent 36%);
   pointer-events: none;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 660px;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-panel {
+    max-width: 100%;
+  }
 }
 
 .hero-visual {
