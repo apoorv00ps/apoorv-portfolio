@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# If you publish this site under a real domain, update the sitemap URL below.
+Sitemap: https://apoorvrajshringi.com/sitemap.xml
